@@ -11,22 +11,37 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#数据库配置
+MYDB = {
+ 'mysql': {
+     'ENGINE': 'django.db.backends.mysql',
+     'NAME': 'testdjango',  # 你的数据库名称
+     'USER': 'root',  # 你的数据库用户名
+     'PASSWORD': 'admin',  # 你的数据库密码
+     'HOST': '',  # 你的数据库主机，留空默认为localhost
+     'PORT': '3306',  # 你的数据库端口
+ },
+ 'sqlite': {
+ 'ENGINE': 'django.db.backends.sqlite3',
+ 'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3').replace('\\', '/'),
+ }
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'x#jy@*70vlm8&z5%&&01t()6m3=phbv9$htvf(fl^b4ae#l#$1'
+SECRET_KEY = 'keopwksdsx(8!32s*ulr#j=qhh)1t%ci_d4rg1t88i((z^g*+7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -70,17 +85,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'zhigengBlog.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': MYDB.get('mysql'),
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -100,20 +110,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
