@@ -11,25 +11,27 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os, logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-#数据库配置
+# 把应用添加到INSTALLED_APPS中
+
+# 数据库配置
 MYDB = {
- 'mysql': {
-     'ENGINE': 'django.db.backends.mysql',
-     'NAME': 'testdjango',  # 你的数据库名称
-     'USER': 'root',  # 你的数据库用户名
-     'PASSWORD': 'admin',  # 你的数据库密码
-     'HOST': '',  # 你的数据库主机，留空默认为localhost
-     'PORT': '3306',  # 你的数据库端口
- },
- 'sqlite': {
- 'ENGINE': 'django.db.backends.sqlite3',
- 'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3').replace('\\', '/'),
- }
+    'mysql': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testdjango',  # 你的数据库名称
+        'USER': 'root',  # 你的数据库用户名
+        'PASSWORD': 'admin',  # 你的数据库密码
+        'HOST': '',  # 你的数据库主机，留空默认为localhost
+        'PORT': '3306',  # 你的数据库端口
+    },
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3').replace('\\', '/'),
+    }
 }
 
 # Quick-start development settings - unsuitable for production
@@ -52,7 +54,92 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user',
+    'Blog',
+    'comment',
+    'Login'
 ]
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': './debug.log',  # 输出日志到指定位置的文件中
+#         },
+#     },
+#     'loggers': {
+#         'django': {  # django框架的输出日志配置
+#             'handlers': ['file'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+# }
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        # verbose输出稍复杂信息，等级、日志、附加时间、进程号等等
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        # simple只输出日志级别和日志信息
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'filters': {
+        # 只有在环境变量DEBUG等于False时才输出日志
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+    },
+    'handlers': {
+        # 直接输出级别为DEBUG(或更高)的信息到控制台，本handler使用名称为simple的format
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_false'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        # 使用AdminEmailHandler发送级别为ERROR(或更高)的信息到网站管理员邮箱，这个handler使用名称为special的过滤器
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': ['require_debug_false']
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': './debug.log',  # 输出日志到指定位置的文件中
+        },
+    },
+    'loggers': {
+        # 打印所有信息到名称为console的handler
+        'django': {
+            'handlers': ['console'],
+            'propagate': True,
+        },
+        # 传递ERROR级别的信息到名为mail_admins的handler
+        # 另外的，该条记录器标示了如果使用本记录器处理日志，那么将不使用django处理
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': False,  ###
+        },
+        # 传递所有INFO级别(或更高)信息到名称为special的过滤器和两个handler
+        # 这样就实现了如果是INFO级别的信息则打印到控制台，如果是ERROR或者CRITICAL级别的则通过email发送给管理员
+        'myproject.custom': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'filters': ['require_debug_false']
+        }
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,4 +213,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# STATIC_URL = '/static/'为静态文件别名
 STATIC_URL = '/static/'
+# 静态文件地址拼接，后面'static'文件为自己建立的存放静态文件（JS，IMG，CSS）的文件名
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),  # 主文件下静态文件
+    os.path.join(BASE_DIR, "Blog", "statics"),  # 项目blog文件下静态文件
+)
