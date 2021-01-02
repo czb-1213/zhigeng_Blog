@@ -1,0 +1,234 @@
+body {
+    background-color: rgb(252, 248, 242);
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 50px;
+}
+
+.header>span {
+    margin-left: 30px;
+    font-size: 105%;
+    font-weight: 500;
+}
+
+.header a {
+    color: #000;
+}
+
+.decoration1 {
+    position: absolute;
+    top: 50px;
+    left: -56px;
+}
+
+.decoration2 {
+    position: absolute;
+    float: right;
+    top: 150px;
+    right: -58px;
+}
+
+
+.decoration3 {
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+
+.decoration4 {
+    position: absolute;
+    top: 280px;
+    left: 80px;
+}
+.decoration5 {
+    position: absolute;
+    top: 200px;
+    right: 80px;
+}
+
+#p1 {
+    width: 120px;
+    height: 153px;
+}
+
+#p2 {
+    width: 133px;
+    height: 150px;
+}
+
+#p3 {
+    width: 48px;
+    height: 116px;
+}
+
+#p4 {
+    width: 260px;
+}
+
+#p5 {
+    width: 248px;
+    height: 302px;
+}
+
+/* .web-title {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+.center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+    padding-top: 35px;
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 130px;
+    width: 100%;
+    height: 75%;
+    align-items: center;
+}
+
+.register-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 320px;
+    flex-direction: column;
+    padding: 25px 25px 0px 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    box-shadow: 5px 0px 5px rgb(237, 234, 229);
+    z-index: 2;
+}
+
+/* .box-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+.box-header_login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box-header_register {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-text {
+    font-family: "微软雅黑";
+    font-size: 125%;
+    font-weight: bolder;
+}
+
+.input-box {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#login {
+    text-decoration: none;
+    color: rgb(128, 55, 107);
+}
+
+#password {
+    margin-bottom: 20px;
+}
+
+#username {
+    margin-bottom: 20px;
+}
+
+.box-foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#line {
+    width: 110%;
+    height: 1px;
+    background-color: #bbb;
+}
+
+#foot-tip {
+    display: flex;
+    position: absolute;
+    top: 320px;
+    width: 300px;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-weight: 525;
+    /* padding: 5px; */
+    border-radius: 0 0 10px 10px;
+    background-color: #eee;
+    box-shadow: 5px -1px 5px rgb(237, 234, 229);
+}
+
+.other-ways {
+    display: flex;
+    justify-content: space-around;
+    width: 120%;
+    padding: 10px 0px;
+    font-size: xx-small;
+    color: #bbb;
+}
+
+.ico1 img{
+    width: 20px;
+}
+
+.ico2 img {
+    width: 20px;
+    height: 25px;
+}
+
+.ico3 img {
+    width: 26px;
+}
+
+.ways {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 63%;
+}
+
+.ways a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 520px;
+    padding: 20px 0;
+}
