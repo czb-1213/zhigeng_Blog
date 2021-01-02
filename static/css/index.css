@@ -47,7 +47,7 @@ body {
 .center {
     position: absolute;
     top: 0px;
-    left: 43%;
+    left: 45%;
     padding-top: 35px;
 }
 
@@ -96,6 +96,7 @@ body {
 .decoration2 img {
     width: 33px;
     height: 19px;
+    margin-top: 35px;
 }
 
 .decoration3 {

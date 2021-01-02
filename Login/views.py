@@ -1,13 +1,24 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
+
+
 def index(request):
     pass
-    return render(request,'login/index.html')
+    return render(request, 'index.html')
+
+
 def login(request):
     pass
-    return render(request,'login/login.html')
+    return render('index.html')
+
+def tologin(request):
+    pass
+    return render(request, 'login.html')
+
 def register(request):
     pass
-    return render(request,'login/register.html')
+    return render(request, 'register.html')
+
+
 def logout(request):
     pass
     return redirect('/index/')
