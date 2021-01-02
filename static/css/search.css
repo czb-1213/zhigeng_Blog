@@ -1,0 +1,179 @@
+body {
+    background-color: rgb(252, 248, 242);
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 40%;
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left-txt {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    width: 80%;
+}
+
+.left a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* .center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+}
+
+.center h1 {
+    position: absolute;
+    left: 28%;
+    top: 0%;
+    color: white;
+    font-family: 宋体;
+    font-weight: 900;
+    font-size: x-large;
+} */
+
+.center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+    padding-top: 35px;
+}
+
+.right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.right-content {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    top: 25px;
+    right: 0px;
+}
+
+.right a {
+    color: #999;
+    text-decoration: none;
+}
+
+.rp {
+    width: 35px;
+}
+
+.decoration {
+    position: absolute;
+    top: 70px;
+    left: -30px;
+}
+
+.decoration img {
+    width: 134.55px;
+    height: 116.325px;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    top: 150px;
+    width: 100%;
+    height: 35%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    width: 100%;
+    padding: 30px 30px 30px 50px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    width: 600px;
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    margin: 30px;
+    outline: none;
+    font-size: 110%;
+}
+
+select {
+    border: none;
+    outline: none;
+    line-height: 0.40rem;
+    padding-left: 1.25rem;
+    background: none;
+    color: rgb(228, 192, 165);
+    font-style: normal;
+    font-weight: bold;
+}
+
+option {
+    border: none;
+    outline: none;
+    background-color: rgb(252, 248, 242);
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    outline: none;
+    width: 115px;
+    height: 30px;
+    background-color: rgb(128, 1, 124);
+    color: #fff;
+    border-radius: 2px;
+}
+
+.decoration2 {
+    position: absolute;
+    top: 315px;
+}
+
+.decoration3 {
+    z-index: -1;
+    position: absolute;
+    top: 180px;
+    right: -20px;
+}
+
+.decoration3>img {
+    width: 300px;
+    height: 300px;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 520px;
+    padding: 20px 0;
+}
