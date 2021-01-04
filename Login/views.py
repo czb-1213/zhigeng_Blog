@@ -9,10 +9,11 @@ def index(request):
 
 
 def login(request):
-    if request.session.get('is_login', None):
-        return redirect('/index')
+    # if request.session.get('is_login', None):
+    #     return redirect('/index')
 
     if request.method == "POST":
+        print(request)
         login_form = UserForm(request.POST)
         message = "请检查填写的内容！"
         if login_form.is_valid():
@@ -29,10 +30,10 @@ def login(request):
                     message = "密码不正确！"
             except:
                 message = "用户不存在！"
-        return render(request, 'login.html', locals())
+        return render(request, 'index.html', locals())
 
     login_form = UserForm()
-    return render(request, 'login.html', locals())
+    return render(request, 'index.html', locals())
 
 
 def register(request):

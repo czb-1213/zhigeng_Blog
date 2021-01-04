@@ -16,6 +16,8 @@ Including another URLconf
 
 from django.conf.urls import url
 from django.contrib import admin
+from django.urls import path
+
 from Login import views
 
 urlpatterns = [
@@ -24,4 +26,5 @@ urlpatterns = [
     url(r'^login/', views.login),
     url(r'^register/', views.register),
     url(r'^logout/', views.logout),
+    path('', views.index)
 ]
