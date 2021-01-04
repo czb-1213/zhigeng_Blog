@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class User(models.Model):
     SEX_ITEMS = [
         (1, '男'),

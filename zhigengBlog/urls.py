@@ -13,15 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.urls import path
+
+from django.conf.urls import url
 from django.contrib import admin
 from Login import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index),
-    path('login/', views.login, name='login'),
-    path('tologin/', views.tologin, name='tologin'),
-    path('register/', views.register),
-    path('logout/', views.logout),
+    url(r'^admin/', admin.site.urls),
+    url(r'^index/', views.index),
+    url(r'^login/', views.login),
+    url(r'^register/', views.register),
+    url(r'^logout/', views.logout),
 ]

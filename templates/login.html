@@ -54,7 +54,7 @@
         <div class=".box-header_login">
             <div class="welcome-text">登录到您的账户</div>
         </div>
-        <form action="{% url 'login' %}" method="post">
+        <form class='form-login' action="/login/" method="post">
             <div class="input-box">
                 {% csrf_token %}
                 <div class="username">
