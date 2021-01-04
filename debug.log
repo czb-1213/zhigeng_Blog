@@ -1600,3 +1600,710 @@ Traceback (most recent call last):
   File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\template\loader.py", line 19, in get_template
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: index..html
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 8, in index
+    return render('index.html')
+TypeError: render() missing 1 required positional argument: 'template_name'
+Internal Server Error: /tologin/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 12, in tologin
+    return render('login.html')
+TypeError: render() missing 1 required positional argument: 'template_name'
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 23, in login
+    {'err': 0}
+TypeError: unhashable type: 'dict'
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'err'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 47, in login
+    return render(request, 'login.html', context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 113: 'err'. Did you forget to register or load this tag?
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'err'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 47, in login
+    return render(request, 'login.html', context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 113: 'err'. Did you forget to register or load this tag?
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'err'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 47, in login
+    return render(request, 'login.html', context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 113: 'err'. Did you forget to register or load this tag?
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'message'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 43, in login
+    return render(request, 'login.html', {'message': message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 70: 'message'. Did you forget to register or load this tag?
+Internal Server Error: /tologin/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 470, in parse
+    compile_func = self.tags[command]
+KeyError: 'message'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 14, in tologin
+    return render(request, 'login.html')
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 472, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 534, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 70: 'message'. Did you forget to register or load this tag?
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 35, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 42, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 45, in login
+    return render(request, 'login.html', {'message', message})
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than set.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 34, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 35, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 47, in login
+    return render(request, 'login.html', message)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than str.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 35, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 47, in login
+    return render(request, 'login.html', message)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 59, in render
+    context = make_context(context, request, autoescape=self.backend.engine.autoescape)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 268, in make_context
+    raise TypeError('context must be a dict rather than %s.' % context.__class__.__name__)
+TypeError: context must be a dict rather than str.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 38, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 51, in login
+    return render(request, 'login.html', context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 663, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[message]' from 'context[message]'
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 38, in login
+    user = User.objects.get(name=username)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 431, in get
+    self.model._meta.object_name
+user.models.User.DoesNotExist: User matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 51, in login
+    return render(request, 'login.html', context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 155, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 193, in compile_nodelist
+    return parser.parse()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 449, in parse
+    raise self.error(token, e)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 447, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 563, in compile_filter
+    return FilterExpression(token, self)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 663, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[message]' from 'context[message]'
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.register didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.register didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.register didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.register didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /register/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view Login.views.register didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /toregister/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 52, in toregister
+    return render(request, 'register/')
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register/
+Internal Server Error: /toregister/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 52, in toregister
+    return render(request, 'register/')
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: register/

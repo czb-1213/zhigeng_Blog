@@ -21,10 +21,17 @@ from django.urls import path
 from Login import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^index/', views.index),
-    url(r'^login/', views.login),
-    url(r'^register/', views.register),
-    url(r'^logout/', views.logout),
-    path('', views.index)
+    # url(r'^admin/', admin.site.urls),
+    # url(r'^index/', views.index),
+    # url(r'^login/', views.login),
+    # url(r'^register/', views.register),
+    # url(r'^logout/', views.logout),
+    path('', views.index),
+    path('index/',views.index),
+    path('admin/', admin.site.urls),
+    path('write/', views.write),
+    path('login/', views.login),
+    path('toregister/',views.toregister),
+    path('register/', views.register),
+    path('logout/', views.logout)
 ]
