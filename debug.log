@@ -2442,3 +2442,26 @@ Traceback (most recent call last):
   File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
     raise ValueError(
 ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /tosearch/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Blog\views.py", line 16, in tosearch
+    return render(request, 'search.html')
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\base.py", line 168, in render
+    with context.bind_template(self):
+  File "C:\Users\陈章本\AppData\Local\Programs\Python\Python37\lib\contextlib.py", line 112, in __enter__
+    return next(self.gen)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context.py", line 244, in bind_template
+    updates.update(processor(self.request))
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context_processors.py", line 40, in debug
+    if settings.DEBUG and request.META.get('REMOTE_ADDR') in settings.INTERNAL_IPS:
+AttributeError: module 'django.http.request' has no attribute 'META'

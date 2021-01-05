@@ -17,7 +17,7 @@ def write(request):
 
 def login(request):
     if request.session.get('is_login', None):
-        return redirect('/index')
+        return redirect('/index/')
 
     if request.method == "POST":
         login_form = UserForm(request.POST)
@@ -31,7 +31,7 @@ def login(request):
                     request.session['is_login'] = True
                     request.session['user_id'] = user.id
                     request.session['user_name'] = user.name
-                    return redirect('/index/')
+                    return redirect('index/')
                 else:
                     message = "密码不正确！"
             except:
