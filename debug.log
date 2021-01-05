@@ -2307,3 +2307,138 @@ Traceback (most recent call last):
   File "E:\ÏîÄ¿\zhigengBlog\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: register/
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
+    raise ValueError(
+ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.

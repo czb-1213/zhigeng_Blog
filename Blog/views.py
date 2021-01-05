@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from Blog.models import Article
 
-# Create your views here.
+
+def archive(request):
+    posts = Article.objects.all()
+    return render(request, 'index.html', {'posts': posts})
