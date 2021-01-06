@@ -18,13 +18,23 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 
-from Login import views
+from Login import views as Loginviews
+from Blog import views as Blogviews
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^index/', views.index),
-    url(r'^login/', views.login),
-    url(r'^register/', views.register),
-    url(r'^logout/', views.logout),
-    path('', views.index)
+    # url(r'^admin/', admin.site.urls),
+    # url(r'^index/', views.index),
+    # url(r'^login/', views.login),
+    # url(r'^register/', views.register),
+    # url(r'^logout/', views.logout),
+    path('', Loginviews.index),
+    path('index/',Loginviews.index),
+    path('admin/', admin.site.urls),
+    path('write/', Loginviews.write),
+    path('login/', Loginviews.login),
+    path('toregister/',Loginviews.toregister),
+    path('register/', Loginviews.register),
+    path('logout/', Loginviews.logout),
+    path('about/', Blogviews.about),
+    path('tosearch/', Blogviews.tosearch)
 ]

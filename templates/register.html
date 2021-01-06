@@ -14,10 +14,10 @@
 
 <body>
     <div class="header">
-        <span><a href="index.html">首页</a></span>
-        <span><a href="about.html">关于</a></span>
-        <span><a href="search.html">搜索</a></span>
-        <span><a href="">管理</a></span>
+                <span><a href="/index/">首页</a></span>
+                <span><a href="/about/">关于</a></span>
+                <span><a href="/tosearch/">搜索</a></span>
+                <span><a href="">管理</a></span>
     </div>
 
     <div class="decoration1">
@@ -48,21 +48,26 @@
                 <div class="welcome-text">你好！</div>
                 <div class="welcome-text">创建你的新账号</div>
             </div>
-            <div class="input-box">
+            <form action="/register/" method="post">
+                {% csrf_token %}
+                <div class="input-box">
                 <div class="username">
-                    <input type="text" class="form-control" id="username" placeholder="用户名" />
+                    <input type="text" class="form-control" id="username" name="username" placeholder="用户名" />
                 </div>
                 <div class="password">
-                    <input type="password" class="form-control" id="password" placeholder="密码" />
+                    <input type="password" class="form-control" id="password" name="password" placeholder="密码" />
                 </div>
-            </div>
-            <div class="box-foot">
                 <button type="submit" class="btn btn-primary" style="width: 100%; background-color: rgb(128, 55, 107); border-color: rgb(128, 55, 107);
                     box-shadow: 2px 5px 7px rgb(143, 141, 137); margin-bottom: 15px;">创建我的账号</button>
+            </div>
+            </form>
+
+            <div class="box-foot" style="margin: 0">
+
                 <br>
                 <div id="line"></div>
                 <div class="other-ways">
-                    <span>社交账号登录</span>
+                    <span class="text-danger text-center">社交账号登录</span>
                     <span class="ways">
                         <a href="">
                             <span class="ico1"><img src="../static/img/login/u17.png" alt=""></span>
@@ -82,7 +87,7 @@
         </div>
         <div id="foot-tip">
             <span>已有账号？</span>
-            <a href="login.html" id="login">点击登录</a>
+            <a href="/login/" id="login">点击登录</a>
         </div>
     </div>
 

@@ -14,18 +14,10 @@
 
 <body>
 <div class="header">
-        <span>
-            <a href="index.html">首页</a>
-        </span>
-    <span>
-            <a href="about.html">关于</a>
-        </span>
-    <span>
-            <a href="search.html">搜索</a>
-        </span>
-    <span>
-            <a href="#">管理</a>
-        </span>
+    <span><a href="/index/">首页</a></span>
+    <span><a href="/about/">关于</a></span>
+    <span><a href="/tosearch/">搜索</a></span>
+    <span><a href="">管理</a></span>
 </div>
 <div class="decoration1">
     <img id="p1" src="../static/img/login/19.png" alt="">
@@ -58,23 +50,24 @@
             <div class="input-box">
                 {% csrf_token %}
                 <div class="username">
-                    <input type="text" class="form-control" id="username" placeholder="账号"/>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="账号"/>
                 </div>
                 <div class="password">
-                    <input type="password" class="form-control" id="password" placeholder="密码"/>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="密码"/>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%; background-color: rgb(128, 55, 107); border-color: rgb(128, 55, 107);
                     box-shadow: 2px 5px 7px rgb(143, 141, 137); margin-bottom: 15px;">登录
             </button>
+            <span class="text-danger" style="margin: 0">{{ message }}</span>
         </form>
 
-        <div class="box-foot">
+        <div class="box-foot" style="margin: 0">
 
             <br>
             <div id="line"></div>
             <div class="other-ways">
-                <span>社交账号登录</span>
+                <span class="text-danger text-center">社交账号登录</span>
                 <span class="ways">
                         <a href="">
                             <span class="ico1"><img src="../static/img/login/u17.png" alt=""></span>
@@ -94,7 +87,7 @@
     </div>
     <div id="foot-tip">
         <span>没有账号？</span>
-        <a href="register.html" id="login">点击注册</a>
+        <a href="/toregister/" id="login">点击注册</a>
     </div>
 </div>
 <div class="bottom-text">
@@ -109,5 +102,15 @@
     </div>
 </div>
 </body>
+<script>
+    var bloo =
+    {{ err }}
+    if (bloo)
+        myFunction()
 
+    function myFunction() {
+        var msg = {{ message }}
+            alert(msg)
+    }
+</script>
 </html>

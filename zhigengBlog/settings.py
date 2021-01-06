@@ -19,6 +19,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # 把应用添加到INSTALLED_APPS中
 
 # 数据库配置
+# MYDB = {
+#     'mysql': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'text',  # 你的数据库名称
+#         'USER': 'root',  # 你的数据库用户名
+#         'PASSWORD': '',  # 你的数据库密码
+#         'HOST': '',  # 你的数据库主机，留空默认为localhost
+#         'PORT': '3306',  # 你的数据库端口
+#     },
+#     'sqlite': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3').replace('\\', '/'),
+#     }
+# }
+
 MYDB = {
     'mysql': {
         'ENGINE': 'django.db.backends.mysql',
@@ -34,20 +49,7 @@ MYDB = {
     }
 }
 
-# MYDB = {
-#     'mysql': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'text',  # 你的数据库名称
-#         'USER': 'root',  # 你的数据库用户名
-#         'PASSWORD': '',  # 你的数据库密码
-#         'HOST': '',  # 你的数据库主机，留空默认为localhost
-#         'PORT': '3306',  # 你的数据库端口
-#     },
-#     'sqlite': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db/db.sqlite3').replace('\\', '/'),
-#     }
-# }
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
