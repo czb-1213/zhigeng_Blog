@@ -2442,6 +2442,7 @@ Traceback (most recent call last):
   File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 307, in check_response
     raise ValueError(
 ValueError: The view Login.views.login didn't return an HttpResponse object. It returned None instead.
+<<<<<<< Updated upstream
 Internal Server Error: /tosearch/
 Traceback (most recent call last):
   File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
@@ -2465,3 +2466,86 @@ Traceback (most recent call last):
   File "E:\项目\zhigengBlog\venv\lib\site-packages\django\template\context_processors.py", line 40, in debug
     if settings.DEBUG and request.META.get('REMOTE_ADDR') in settings.INTERNAL_IPS:
 AttributeError: module 'django.http.request' has no attribute 'META'
+=======
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\text1\zhigeng_Blog\Login\views.py", line 22, in login
+    user = User.objects.filter(username=user_name)  #查看数据库里是否有该用户名
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: created_time, email, fans, follow, id, name, password, phone, profession, qq_name, sex, status, wc_name
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\text1\zhigeng_Blog\Login\views.py", line 22, in login
+    user = User.objects.filter(username=user_name)  #查看数据库里是否有该用户名
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: created_time, email, fans, follow, id, name, password, phone, profession, qq_name, sex, status, wc_name
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\text1\zhigeng_Blog\Login\views.py", line 22, in login
+    user = User.objects.filter(username=user_name)  #查看数据库里是否有该用户名
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1377, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\22520\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'username' into field. Choices are: created_time, email, fans, follow, id, name, password, phone, profession, qq_name, sex, status, wc_name
+>>>>>>> Stashed changes
