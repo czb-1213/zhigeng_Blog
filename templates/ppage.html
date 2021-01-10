@@ -6,12 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 		<!--引入字体样式-->
 		<link rel="stylesheet" href="./css/fontawesome/all.min.css">
-		<link href="css/mypointpage.css" type="text/css" rel="stylesheet">
-		<link rel="stylesheet" href="../../static/css/font_2y2coaxfdl/iconfont.css">
-		<title>我的关注</title>
+		<link href="../static/css/personpage.css" type="text/css" rel="stylesheet">
+		<link rel="stylesheet" href="../static/css/font_2y2coaxfdl/iconfont.css">
+		<title>我的主页</title>
 	</head>
 	<body>
 		<div class="header">
@@ -22,10 +22,10 @@
 					<span><a href="">分类</a></span>
 					<span><a href="">搜索</a></span>
 				</div>
-				<img src="img/1.png" alt="">
+				<img src="../static/img/info/1.png" alt="">
 			</span>
 			<span class="center">
-				<img src="img/2.png" alt="">
+				<img src="../static/img/info/2.png" alt="">
 				<h1>知更鸟</h1>
 			</span>
 			<span class="right">
@@ -33,15 +33,15 @@
 					<span><a href="">个人中心</a></span>
 					<a href=""><i class="iconfont icon-shuru" href="" style="color: gray;"></i></a>
 				</div>
-				<img src="img/3.png" alt="">
+				<img src="../static/img/info/3.png" alt="">
 			</span>
 			<div class="decoration">
-				<img src="img/7.svg" alt="">
+				<img src="../static/img/info/7.svg" alt="">
 			</div>
 		</div>
 		<div class="box">
 			<div class="content">
-				<a href="#"><img src="img/22.jpg" id="img5" alt=""></a>
+				<a href="#"><img src="../static/img/info/22.jpg" id="img5" alt=""></a>
 				<br />
 				<a id="name1">奶味爱丽丝</a>
 				<br />
@@ -85,108 +85,61 @@
 						<a class="btn btn-lg btn-block mb-3" href="mypoint.html" role="button" style="background-color: #56bde9; ">我的关注</a>
 					</div>
 				</div>
-				<!-- 我的关注具体内容--中右部分 -->
 				<div class="box2 col-8">
 					<div class="content mt-2" id="mypage">
-						<a>我的关注</a>
+						<a>我的主页</a>
 					</div>
 					<div class="container">
-						<div class="flex-box">
-							<div class="flex-box2" style="flex-grow: 1;">
-								<a href="othersp.html"><img src="img/02.jpg" id="img5" alt=""></a>
+						<div class="flex-box" style="background-color: white;font-size: large;">
+							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
+							<div class="text ml-5 mr-5 mt-3">
+								<a id="text11">大众没有辨别能力，因而无法判断事情的真伪，许多经不起推敲的观点，都能轻而易举的得到普遍赞同。</a>
 							</div>
-							<div class="flex-box2 " style="flex-grow: 11;">
-								<div class="name mt-4">
-									<a id="name2">一只小鲨鱼</a>
-								</div>
-								<div class="message mt-3">
-									<a id="message2">桃李春风一杯酒，江湖夜雨十年灯</a>
-								</div>
+							<div class="authorname mr-5" id="author">
+								<a id="text11"> ---《乌合之众》</a>
 							</div>
-							<div class="mt-5" style="position: absolute;right: 8%;" >
-								<button type="button" class="btn btn-outline-danger" id="pointbtn1" style="display: block;" onclick="unpoint1()"> + 关注</button>
-								<button type="button" class="btn btn-danger" id="pointbtn4" style="display: none;" onclick="unpoint1()"> √ 已关注</button>
+							<div class="name p-5">
+								<a id="text3" class="name">奶味爱丽丝</a>
+								<a id="text4" class="time ml-2" href="#">删除</a>
+								<a id="text4" class="time">2020年12月20日</a>
 							</div>
 						</div>
-						<div class="flex-md-row" style="width: 100%;height: 1px;background-color: gainsboro;"></div>
-						<div class="flex-box ">
-							<div class="flex-box2"  style="flex-grow: 1;">
-								<a href="othersp.html"><img src="img/03.jpg" id="img5" alt=""></a>
+						<div class="flex-box mt-5" style="background-color: white;">
+							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
+							<div class="text ml-5 mr-5 mt-3">
+								<a id="text11">若有诗书藏于心，岁月从不败美人。</a>
 							</div>
-							<div class="flex-box2 " style="flex-grow: 11;">
-								<div class="name mt-4">
-									<a id="name2">一只小福蝶</a>
-								</div>
-								<div class="message mt-3">
-									<a id="message2">庄生晓梦迷蝴蝶，望帝春心托杜鹃</a>
-								</div>
+							<div class="authorname mr-5" id="author">
+								<a id="text11"><br></a>
 							</div>
-							<div class="mt-5" style="position: absolute;right: 8%;" >
-								<button type="button" class="btn btn-outline-danger" id="pointbtn2"  onclick="unpoint2()"> + 关注</button>
-								<button type="button" class="btn btn-danger" id="pointbtn5" style="display: none;" onclick="unpoint2()"> √ 已关注</button>
+							<div class="name p-5">
+								<a id="text3" class="name">奶味爱丽丝</a>
+								<a id="text4" class="time ml-2" href="#">删除</a>
+								<a id="text4" class="time ">2020年12月20日</a>
 							</div>
 						</div>
-						<div class="flex-md-row" style="width: 100%;height: 1px;background-color: gainsboro;"></div>
-						<div class="flex-box ">
-							<div class="flex-box2"  style="flex-grow: 1;">
-								<a href="othersp.html"><img src="img/04.jpg" id="img5"  alt=""></a>
+						<div class="flex-box mt-5 " style="background-color: white;">
+							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
+							<div class="text ml-5 mr-5 mt-3">
+								<a id="text11">安静的努力，让成功替你发出声音。</a>
 							</div>
-							<div class="flex-box2 " style="flex-grow: 11;">
-								<div class="name mt-4">
-									<a id="name2">一只大鲨鱼</a>
-								</div>
-								<div class="message mt-3">
-									<a id="message2">泪尽罗巾梦不成，夜深前殿按歌声</a>
-								</div>
+							<div class="authorname mr-5" id="author">
+								<a id="text11"><br></a>
 							</div>
-							<div class="mt-5" style="position: absolute;right: 8%;" >
-								<button type="button" class="btn btn-outline-danger" id="pointbtn3"  onclick="unpoint3()"> + 关注</button>
-								<button type="button" class="btn btn-danger" id="pointbtn6" style="display: none;" onclick="unpoint3()"> √ 已关注</button>
+							<div class="name p-5">
+								<a id="text3" class="name">奶味爱丽丝</a>
+								<a id="text4" class="time ml-2" href="#">删除</a>
+								<a id="text4" class="time">2020年12月20日</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script  type="text/javascript">
-			function unpoint1(){
-			  var btn1=document.getElementById("pointbtn1");
-			  var btn4=document.getElementById("pointbtn4");
-			  if(btn1.style.display=='none') {
-				  btn1.style.display='block';
-				  btn4.style.display='none';
-				  }
-			  else {
-				  btn1.style.display='none';
-				  btn4.style.display='block';
-				  };
-			}
-			function unpoint2(){
-			  var btn2=document.getElementById("pointbtn2");
-			  var btn5=document.getElementById("pointbtn5");
-			  if(btn2.style.display=='none') {
-			  				  btn2.style.display='block';
-			  				  btn5.style.display='none';
-			  				  }
-			  else {
-			  				  btn2.style.display='none';
-			  				  btn5.style.display='block';
-			  				  };
-			}
-			function unpoint3(){
-			  var btn3=document.getElementById("pointbtn3");
-			  var btn6=document.getElementById("pointbtn6");
-			  if(btn3.style.display=='none') {
-			  				  btn3.style.display='block';
-			  				  btn6.style.display='none';
-			  				  }
-			  else {
-			  				  btn3.style.display='none';
-			  				  btn6.style.display='block';
-			  				  };
-			}
 			function hide(){
 			  var card1=document.getElementById("card001");
 			  var card2=document.getElementById("card002");
