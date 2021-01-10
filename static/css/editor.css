@@ -1,0 +1,156 @@
+body {
+    background-color: rgb(252, 248, 242);
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left-txt {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    width: 80%;
+}
+
+.left a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* .center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+} */
+
+.center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+    padding-top: 35px;
+}
+
+/* .center h1{
+    position: absolute;
+    left: 28%;
+    top: 0%;
+    color: white;
+    font-family: 宋体;
+    font-weight:900;
+    font-size:x-large;
+} */
+
+.right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.right-content {
+    position:  absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    top: 25px;
+    right: 0px;
+}
+
+.right a {
+    color: #999;
+    text-decoration: none;
+}
+
+.rp {
+    width: 35px;
+}
+
+.decoration1 {
+   position: absolute;
+   top: 70px; 
+   left: -30px;
+}
+.decoration2 {
+   position: absolute;
+   top: 200px; 
+   left: 285px;
+   z-index: -1;
+}
+.decoration3 {
+   position: absolute;
+   top: 70px; 
+   left: 650px;
+   z-index: -1;
+}
+.decoration4 {
+   position: absolute;
+   top: 160px; 
+   left: 770px;
+   z-index: -1;
+}
+
+.decoration1 img {
+    width: 134.55px;
+    height: 116.325px;
+}
+.decoration2 img {
+    width: 165px;
+    height: 201px;
+}
+.decoration3 img {
+    width: 420px;
+    height: 450px;
+}
+.decoration4 img {
+    width: 153x;
+    height: 240px;
+}
+
+form {
+    position: absolute;
+    top: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#editor {
+    resize: none;
+    border: 5px #888 solid;
+    font-size: larger;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 275px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 35px;
+}
+.tools {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 42px;
+}
+
+#submit>button{
+    border-radius: 5px;
+    border: rgb(129, 0, 127) 1px solid;
+    background-color: rgb(129, 0, 127);
+    color: #fff;
+    width: 210px;
+    height: 36px;
+    margin-left: 40px;
+}

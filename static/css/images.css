@@ -1,0 +1,161 @@
+body {
+    background-color: rgb(252, 248, 242);
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 40%;
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.left-txt {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    width: 80%;
+}
+
+.left a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.center {
+    position: absolute;
+    top: 0px;
+    left: 43%;
+    padding-top: 35px;
+}
+
+/* .center h1{
+    position: absolute;
+    left: 28%;
+    top: 0%;
+    color: white;
+    font-family: 宋体;
+    font-weight:900;
+    font-size:x-large;
+} */
+
+.right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.right-content {
+    position:  absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    width: 80%;
+    top: 25px;
+    right: 0px;
+}
+
+.right a {
+    color: #999;
+}
+
+.rp {
+    width: 35px;
+}
+
+.decoration {
+    position: absolute;
+    top: 70px; 
+    left: -30px;
+ }
+
+ .decoration img {
+    width: 134.55px;
+    height: 116.325px;
+}
+
+.decoration2 {
+    position: absolute;
+    top: 400px;
+    z-index: -1;
+}
+.decoration2 img {
+    width: 209px;
+    height: 209px;
+}
+.decoration3 {
+    position: absolute;
+    top: 200px;
+    right: -25px;
+    z-index: -1;
+}
+.decoration3 img {
+    width: 209px;
+    height: 209px;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 350px;
+    width: 100%;
+    height: 63%;
+}
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(252, 248, 242);
+    /* border: #000 1px solid; */
+    width: 850px;
+    height: 725px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    margin-bottom: 20px;
+}
+
+#up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#up img{
+    width: 384x;
+    height: 288px;
+    padding: 5px;
+}
+
+#down {
+    padding-top: 5px;
+}
+
+#down img{
+    width: 778x;
+    height: 276px;
+}
+
+.bottom-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 920px;
+    padding: 20px 0;
+}
