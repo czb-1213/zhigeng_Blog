@@ -70,11 +70,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'user',
     'Blog',
     'comment',
     'Login'
 ]
+SITE_ID = 1
 
 # LOGGING = {
 #     'version': 1,
