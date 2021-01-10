@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6393850",
+      "name": "输入",
+      "font_class": "shuru",
+      "unicode": "e507",
+      "unicode_decimal": 58631
+    },
+    {
+      "icon_id": "18827017",
+      "name": "引号",
+      "font_class": "yinhao",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    }
+  ]
+}

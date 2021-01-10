@@ -1,0 +1,31 @@
+body {
+	background-image: url(../img/bg.png);
+	background-size: 1200px 700px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right;
+}
+#content{
+	font-size: 30px;
+	color: gray;
+	margin-top: 130px;
+	font-weight:bold;
+}
+#box{
+	width: 370px;
+	height: 300px;
+	margin-top: 30px;
+}
+#text{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#res{
+	margin-top: 20px;
+	text-align: center;
+}
+#register{
+	margin-left: 30px;
+	
+}
