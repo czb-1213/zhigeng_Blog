@@ -20,3 +20,5 @@ class Follow(models.Model):
     fans = models.ForeignKey(Fans, on_delete=models.PROTECT)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     created_time = models.DateField(auto_now_add=True, editable=False, verbose_name="关注时间")
+    def __str__(self):
+		return "follow:{},fan:{}".format(self.follow,self.fan)

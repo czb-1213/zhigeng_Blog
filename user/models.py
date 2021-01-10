@@ -19,7 +19,7 @@ class User(models.Model):
     wc_name = models.CharField(max_length=128, verbose_name="微信账号", blank=True)
     phone = models.CharField(max_length=128, verbose_name="电话", blank=True)
     email = models.EmailField(verbose_name="Email", blank=True)
-
+    signature = models.CharField(max_length=128, verbose_name="签名")
     status = models.IntegerField(choices=STATUS_ITEMS, default=0, verbose_name="审核状态", blank=True)
     created_time = models.DateField(auto_now_add=True, editable=False, verbose_name="创建时间", blank=True)
 
