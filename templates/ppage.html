@@ -30,7 +30,7 @@
 			<span class="right">
 				<div class="right-content">
 					<span><a href="/myinfo/" style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
-					<a href=""><i class="iconfont icon-shuru" href="" style="color: gray;"></i></a>
+					<a href="/write/"><i class="iconfont icon-shuru" href="" style="color: gray;"></i></a>
 				</div>
 				<img src="../static/img/info/3.png" alt="">
 			</span>
@@ -44,7 +44,7 @@
 				<br />
 				<a id="name1">{{ request.session.user_name }}</a>
 				<br />
-				<a id="message1">桃李春风一杯酒，江湖夜雨十年灯</a>
+				<a id="message1">{{ request.session.user_signature }}</a>
 			</div>
 		</div>
 		<div class="container">
@@ -57,9 +57,9 @@
 								<h6 class="card-subtitle mb-4" style="font-weight:bold;">个人信息</h6>
 								<p class="card-subtitle mb-3">昵称：<a>{{ request.session.user_name }}</a></p>
 								<p class="card-subtitle mb-3">签名：<a>{{ request.session.user_signature }}</a></p>
-								<p class="card-subtitle mb-3">电话：<a>15507437234</a></p>
-								<p class="card-subtitle mb-3">Q Q：<a>1254809709</a></p>
-								<p class="card-subtitle mb-3">微信：<a>12345678</a></p>
+								<p class="card-subtitle mb-3">电话：<a>{{ request.session.user_phone }}</a></p>
+								<p class="card-subtitle mb-3">Q Q：<a>{{ request.session.user_qq }}</a></p>
+								<p class="card-subtitle mb-3">微信：<a>{{ request.session.user_wc }}</a></p>
 								<button type="button" class="btn btn-light" id="btn00" onclick="hide()">点击编辑</button>
 							</div>
 						</div>
@@ -68,20 +68,20 @@
 						<div class="card border-light" style="width: 100%;">
 							<div class="card-body">
 								<h6 class="card-subtitle mb-4" style="font-weight:bold;">个人信息</h6>
-								<p class="card-subtitle mb-3">昵称：<input class="input" style="height: 25px;width: 75%;" placeholder="奶味爱丽丝" /></p>
-								<p class="card-subtitle mb-3">签名：<input class="input" style="height: 25px;width: 75%;" placeholder="桃李春风一杯酒，江湖夜雨十年灯" /></p>
-								<p class="card-subtitle mb-3">电话：<input class="input" style="height: 25px;width: 75%;" placeholder="15507437234" /></p>
-								<p class="card-subtitle mb-3">Q Q： <input class="input" style="height: 25px;width: 75%;" placeholder="1254809709" /></p>
-								<p class="card-subtitle mb-3">微信：<input class="input" style="height: 25px;width: 75%;" placeholder="12345678" /></p>
+								<p class="card-subtitle mb-3">昵称：<input class="input" style="height: 25px;width: 75%;" name="username" placeholder="{{ request.session.user_name }}" /></p>
+								<p class="card-subtitle mb-3">签名：<input class="input" style="height: 25px;width: 75%;" name="signature" placeholder="{{ request.session.user_signature }}" /></p>
+								<p class="card-subtitle mb-3">电话：<input class="input" style="height: 25px;width: 75%;" name="phone" placeholder="{{ request.session.user_phone }}" /></p>
+								<p class="card-subtitle mb-3">Q Q： <input class="input" style="height: 25px;width: 75%;" name="qq" placeholder="{{ request.session.user_qq }}" /></p>
+								<p class="card-subtitle mb-3">微信：<input class="input" style="height: 25px;width: 75%;" name="wc" placeholder="{{ request.session.user_wc }}" /></p>
 								<button type="button" class="btn btn-light" id="btn01" onclick="show()">确认修改</button>
 							</div>
 						</div>
 					</div>
 					<!-- 按钮栏 -->
 					<div class="card2 mt-4">
-						<a class="btn btn-lg btn-block mb-3" href="ppage.html" role="button" style="background-color: #fd9800; ">我的发布</a>
-						<a class="btn btn-lg btn-block mb-3" href="myinfo.html" role="button" style="background-color: #4aac9b; ">我的通知</a>
-						<a class="btn btn-lg btn-block mb-3" href="mypoint.html" role="button" style="background-color: #56bde9; ">我的关注</a>
+						<a class="btn btn-lg btn-block mb-3" href="/mysend/" role="button" style="background-color: #fd9800; ">我的发布</a>
+						<a class="btn btn-lg btn-block mb-3" href="/mynotice/" role="button" style="background-color: #4aac9b; ">我的通知</a>
+						<a class="btn btn-lg btn-block mb-3" href="/mypoint/" role="button" style="background-color: #56bde9; ">我的关注</a>
 					</div>
 				</div>
 				<div class="box2 col-8">
@@ -89,48 +89,22 @@
 						<a>我的主页</a>
 					</div>
 					<div class="container">
-						<div class="flex-box" style="background-color: white;font-size: large;">
+                        {% for foo in send %}
+                        <div class="flex-box" style="background-color: white;font-size: large;">
 							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
 							<div class="text ml-5 mr-5 mt-3">
-								<a id="text11">大众没有辨别能力，因而无法判断事情的真伪，许多经不起推敲的观点，都能轻而易举的得到普遍赞同。</a>
+								<a id="text11" href="/{{ foo.id }}/" style="text-decoration: none; color: black">{{ foo.title }}</a>
 							</div>
 							<div class="authorname mr-5" id="author">
 								<a id="text11"> ---《乌合之众》</a>
 							</div>
 							<div class="name p-5">
-								<a id="text3" class="name">奶味爱丽丝</a>
-								<a id="text4" class="time ml-2" href="#">删除</a>
-								<a id="text4" class="time">2020年12月20日</a>
+								<a id="text3" class="name">{{ request.session.user_name }}</a>
+								<a id="text4" class="time ml-2" href="/remove{{ foo.id }}/">删除</a>
+								<a id="text4" class="time" >{{ foo.modify_time }}</a>
 							</div>
 						</div>
-						<div class="flex-box mt-5" style="background-color: white;">
-							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
-							<div class="text ml-5 mr-5 mt-3">
-								<a id="text11">若有诗书藏于心，岁月从不败美人。</a>
-							</div>
-							<div class="authorname mr-5" id="author">
-								<a id="text11"><br></a>
-							</div>
-							<div class="name p-5">
-								<a id="text3" class="name">奶味爱丽丝</a>
-								<a id="text4" class="time ml-2" href="#">删除</a>
-								<a id="text4" class="time ">2020年12月20日</a>
-							</div>
-						</div>
-						<div class="flex-box mt-5 " style="background-color: white;">
-							<i class="iconfont icon-yinhao ml-5" style="color: orange;"></i>
-							<div class="text ml-5 mr-5 mt-3">
-								<a id="text11">安静的努力，让成功替你发出声音。</a>
-							</div>
-							<div class="authorname mr-5" id="author">
-								<a id="text11"><br></a>
-							</div>
-							<div class="name p-5">
-								<a id="text3" class="name">奶味爱丽丝</a>
-								<a id="text4" class="time ml-2" href="#">删除</a>
-								<a id="text4" class="time">2020年12月20日</a>
-							</div>
-						</div>
+                        {% endfor %}
 					</div>
 				</div>
 			</div>

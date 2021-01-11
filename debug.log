@@ -6261,3 +6261,175 @@ Traceback (most recent call last):
   File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
     raise errorclass(errno, errval)
 django.db.utils.IntegrityError: (1048, "Column 'sex' cannot be null")
+Internal Server Error: /toarticle/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Blog\views.py", line 24, in toarticle
+    return render(request, 'passage.html',{{'sentdoc':sentdoc}})
+TypeError: unhashable type: 'dict'
+Internal Server Error: /toarticle/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Blog\views.py", line 24, in toarticle
+    return render(request, 'passage.html',{{'sentdoc':sentdoc}})
+TypeError: unhashable type: 'dict'
+Internal Server Error: /remove3/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: remove() got an unexpected keyword argument 'id'
+Internal Server Error: /myinfo/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Blog\views.py", line 30, in myinfo
+    'send': models.Article.objects.filter(writer_id=id)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <built-in function id>.
+Internal Server Error: /myinfo/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Blog\views.py", line 30, in myinfo
+    'send': models.Article.objects.filter(writer_id=id)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <built-in function id>.
+Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1774, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 11, in index
+    'send': models.Article.objects.filter(writer_id=id)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1319, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\lookups.py", line 24, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\related_lookups.py", line 117, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1778, in get_prep_value
+    ) from e
+TypeError: Field 'id' expected a number but got <built-in function id>.
+Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 11, in index
+    'send': models.Article.objects.filter(writer_id=request.session['user_id'])
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
+    return self._session[key]
+KeyError: 'user_id'
+Internal Server Error: /index/
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 11, in index
+    'send': models.Article.objects.filter(writer_id=request.session['user_id'])
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
+    return self._session[key]
+KeyError: 'user_id'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\项目\zhigeng_Blog\Login\views.py", line 11, in index
+    'send': models.Article.objects.filter(writer_id=request.session['user_id'])
+  File "E:\项目\zhigengBlog\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
+    return self._session[key]
+KeyError: 'user_id'

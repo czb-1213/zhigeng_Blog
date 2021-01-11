@@ -44,5 +44,9 @@ urlpatterns = [
     path('articsent/', Blogviews.articsent),
     path('<int:id>/', Blogviews.article),
     path('mysend/', Userviews.mysend),
+    path('mynotice/', Userviews.mynotice),
+    path('mypoint/', Userviews.mypoint),
+    path('remove<int:id>/', Blogviews.remove),
+    path('addarticle/',Blogviews.addarticle)
 
 ]

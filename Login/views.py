@@ -1,13 +1,19 @@
+import random
+
 from django.shortcuts import render, redirect
 
+from Blog.models import Article
 from Blog.views import hotarticle
 from user.models import User
-from .forms import UserForm, RegisterForm
 
 
 def index(request):
+    n = 10
+    i = random.randint(0, Article.objects.count()-n)
+    articles = Article.objects.all()[i:i+n]
     context = {
-        'hotdoc': hotarticle()
+        'hotdoc': hotarticle(),
+        'send':articles
     }
     print(context)
     return render(request, 'index.html', context)
@@ -38,6 +44,8 @@ def login(request):
                 request.session['user_name'] = user.name
                 request.session['user_email'] = user.email
                 request.session['user_phone'] = user.phone
+                request.session['user_qq'] = user.qq_name
+                request.session['user_wc'] = user.wc_name
                 request.session['user_signature'] = user.signature
                 request.session.set_expiry(300)
                 return redirect('/index/')

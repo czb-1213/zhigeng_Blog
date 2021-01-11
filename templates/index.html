@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
-    <script src="../static/js/jQuery/jquery-3.5.1.min.js"></script>
-    <script src="../static/css/bootstrap/bootstrap.min.js"></script>
-    <script src="../static/js/myScirpt.js"></script>
     <link rel="stylesheet" href="../static/css/index.css">
     <title>知更鸟-首页</title>
 </head>
@@ -36,7 +33,7 @@
                 {% else %}
                     <a href="/login/" style="font-size: 20px">登录</a>
                 {% endif %}
-                <span><a href=""><img src="../static/img/index/edit.png" alt="" class="rp"></a></span>
+                <span><a href="/write/"><img src="../static/img/index/edit.png" alt="" class="rp"></a></span>
             </div>
             <img src="../static/img/index/3.png" alt="">
         </span>
@@ -79,7 +76,8 @@
                 <div class="list">
                     <ol style="font-size: 75%;">
                         {% for foo in hotdoc %}
-                            <li><a href="/{{ foo.id }}/" style="text-decoration: none; color: black;">{{ foo.title }}</a></li>
+                            <li><a href="/{{ foo.id }}/"
+                                   style="text-decoration: none; color: black;">{{ foo.title }}</a></li>
                         {% endfor %}
                     </ol>
                 </div>
@@ -91,6 +89,7 @@
             <div id="spare-title">广场</div>
             <div class="post 1">
                 <img src="../static/img/index/yinghao.png" alt="">
+
             </div>
             <div class="post 2">
                 <img src="../static/img/index/yinghao.png" alt="">

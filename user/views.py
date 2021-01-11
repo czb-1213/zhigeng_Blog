@@ -30,3 +30,17 @@ def mysend(request):
         return render(request, 'ppage.html', context)
     else:
         return redirect('/login/')
+
+
+def mynotice(request):
+    if request.session.get('is_login', False):
+        return render(request, 'myinfo.html')
+    else:
+        return redirect('/login/')
+
+def mypoint(request):
+    if request.session.get('is_login', False):
+        return render(request, 'mypoint.html')
+    else:
+        return redirect('/login/')
+

@@ -29,7 +29,7 @@
         <span class="right">
             <div class="right-content">
                 <span><a href="/myinfo/" style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
-                <span><a href=""><img src="../static/img/editor/edit.png" alt="" class="rp"></a></span>
+                <span><a href="/write/"><img src="../static/img/editor/edit.png" alt="" class="rp"></a></span>
             </div>
             <img src="../static/img/editor/3.png" alt="">
         </span>
@@ -46,9 +46,13 @@
     <div class="decoration4">
         <img src="./../static/img/editor/u547.png" alt="">
     </div>
-    <form role="form">
+
+
+    <form id="form1" action="/addarticle/" method="post">
+        {% csrf_token %}
         <div class="text-editor">
-            <textarea name="zhigengniao-editor" id="editor" cols="100" rows="10" placeholder="请输入内容……"></textarea>
+            <textarea name="title" id="title" autofocus="autofocus" cols="120" rows="1" placeholder="请输入标题……" class="editor"></textarea>
+            <textarea name="content" id="content" cols="120" rows="10" placeholder="请输入内容……" class="editor"></textarea>
         </div>
         <div class="buttons">
             <div class="tools">
@@ -64,5 +68,6 @@
         </div>
     </form>
 </body>
-
+<script>
+</script>
 </html>
