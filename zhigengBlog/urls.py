@@ -20,6 +20,7 @@ from django.urls import path
 
 from Login import views as Loginviews
 from Blog import views as Blogviews
+from user import views as Userviews
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
@@ -40,4 +41,8 @@ urlpatterns = [
     path('toimg/', Blogviews.toimg),
     path('toarticle/', Blogviews.toarticle),
     path('myinfo/', Blogviews.myinfo),
+    path('articsent/', Blogviews.articsent),
+    path('<int:id>/', Blogviews.article),
+    path('mysend/', Userviews.mysend),
+
 ]

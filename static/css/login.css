@@ -106,7 +106,7 @@ body {
     position: absolute;
     top: 0;
     width: 330px;
-    height: 350px;
+    height: 370px;
     flex-direction: column;
     padding: 25px 25px 0px 25px;
     border-radius: 10px 10px 0 0;
@@ -152,11 +152,11 @@ body {
 }
 
 #password {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #username {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .box-foot {
@@ -176,7 +176,7 @@ body {
 #foot-tip {
     display: flex;
     position: absolute;
-    top: 350px;
+    top: 370px;
     width: 330px;
     justify-content: space-around;
     padding: 10px 0;
@@ -229,6 +229,6 @@ body {
     align-items: center;
     width: 100%;
     position: absolute;
-    top: 520px;
+    top: 700px;
     padding: 20px 0;
 }

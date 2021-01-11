@@ -4,10 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../static/js/jQuery/jquery-3.5.1.min.js"></script>
-    <script src="../static/css/bootstrap/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/passageContent.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/passageContent.css">
     <title>知更鸟-文章推荐</title>
 </head>
 
@@ -28,7 +25,7 @@
         </span>
         <span class="right">
             <div class="right-content">
-                <span><a href="">{{ request.session.user_name }}</a></span>
+                <span><a href="/myinfo/" style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
                 <span><a href=""><img src="../static/img/passageContent/edit.png" alt="" class="rp"></a></span>
             </div>
             <img src="../static/img/passageContent/3.png" alt="">
@@ -41,37 +38,8 @@
         <div style="font-size: xx-large; padding: 20px;">文章推荐</div>
         <div class="passage">
             <div class="main">
-                <div id="title">余生很长，别慌张，别失望</div>
-                <div>世上每个人都有自己的发展时区，时区里都有属于自己的步程。</div>
-                <div>最近看了个很火的视频，不到4分钟，却震撼了我的心灵，而这个演讲，也被誉为“今年最好的演讲”。</div>
-                <div>演讲的前一分钟里，给大家讲述了一个教科书版的完美人生。</div>
-                <div>岁成人，22岁大学毕业，25岁工作稳定，30岁之前买房结婚生子，35岁之后人生轨迹就会定型……</div>
-                <div>就这样，我们的前半生甚至一辈子被简单地划分成了几个时间段。</div>
-                <div>可是每一段时间表里都有必须完成的任务，你只能拼命奔跑，不能松气；一旦被拉下，你就会焦虑、害怕。</div>
-                但，我们的人生只能选择这样的生活吗？
-                <div>当然不是。</div>
-                <div>生命的时间表里，每个人都可以选择自己的活法。</div>
-                <div>不必仰望别人，自己亦是风景。</div>
-                <div>正如从一分多开始的另一个人演讲：</div>
-                <div>有的人在16岁就清楚知道自己要什么，但在26岁时改变了想法；</div>
-                <div>有的人有了孩子，却还是单身；有的人结了婚，却等了10年才生孩子；</div>
-                <div>有的人身处一段感情，爱的却是别人；</div>
-                <div>有的人明明彼此相爱，却没有在一起。</div>
-                <div>我想说的是：</div>
-                <div>人生中的每一件事都取决于我们自己的时间，你身边有些朋友也许遥遥领先于你，有些朋友也许落后于你，但凡事都有它自己的节奏。</div>
-                <div>人生，很多事是急不来的</div>
-                <div>就像演讲中提到的：</div>
-                <div>“25岁后才拿到文凭，依然值得骄傲；30岁没结婚，但过得快乐也是一种成功；35岁之后成家也完全可以；40岁买房也没什么丢脸的。”</div>
-                <div>因此，无论当下如何，保持一颗平静的心，从容对待，你想要的，终究会来。</div>
-                <div>就像，姜子牙80岁才挂帅，司马懿60多才受到重用，刘备40多岁才有自己的队伍，所以，一切都不晚，该来的总会来。</div>
-                <div>要知道，人生有时候走得慢一点，稳一点，反而会更快靠近自己想要的生活，有些东西来得晚一点，等得久一点，往往更珍贵。</div>
-                <div>就像嘉措活佛说的那样：“一切都是最好的安排”。</div>
-                <div>命运的安排一切都很精准；路是脚踏出来的，历史是人写出来的，人的每一步行动都在书写自己的历史。</div>
-                <div>而生命就是在等待正确的行动时机，所以不用嫉妒或嘲笑他们。</div>
-                <div>更不要急着让命运给予你所有的答案，有时候，你总要拿出耐心等一等；</div>
-                <div>即使你向空谷喊话，也要等一会儿，才会听见那绵长的回音。</div>
-                <div>《楞严经》上说，“若能转物，则同如来”；无论遇到善缘、逆缘，顺境、逆境，只要你肯等一等，生活的美好，总在你不经意时，盛装莅临。</div>
-                <div>最后，在生命的时区里，愿你走出半生，归来仍是少年，愿你始终相信，一切都会准时到来的。</div>
+                <div id="title">{{ content.title }}</div>
+                <p>{{ content.content }}</p>
             </div>
         </div>
     </div>

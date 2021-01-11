@@ -6,9 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-		<!--引入字体样式-->
-		<link rel="stylesheet" href="./css/fontawesome/all.min.css">
+		<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
 		<link href="../static/css/mypointpage.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" href="../static/css/font_2y2coaxfdl/iconfont.css">
 		<title>我的关注</title>
@@ -30,7 +28,7 @@
 			</span>
 			<span class="right">
 				<div class="right-content">
-					<span><a href="">{{ request.session.user_name }}</a></span>
+					<span><a href="/myinfo/" style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
 					<a href=""><i class="iconfont icon-shuru" href="" style="color: gray;"></i></a>
 				</div>
 				<img src="../static/img/info/3.png" alt="">
@@ -200,8 +198,5 @@
 			  card2.style.display='none';
 			}
 		</script>
-		<script src="./js/plugins/jQuery/jquery-3.3.1.slim.min.js"></script>
-		<script src="./js/plugins/bootstrap/popper.min.js"></script>
-		<script src="./js/plugins/bootstrap/bootstrap.min.js"></script>
 	</body>
 </html>

@@ -6,9 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="../static/css/bootstrap/bootstrap.min.css">
 		<!--引入字体样式-->
-		<link rel="stylesheet" href="./css/fontawesome/all.min.css">
 		<link href="../static/css/personpage.css" type="text/css" rel="stylesheet">
 		<link rel="stylesheet" href="../static/css/font_2y2coaxfdl/iconfont.css">
 		<title>我的主页</title>
@@ -30,7 +29,7 @@
 			</span>
 			<span class="right">
 				<div class="right-content">
-					<span><a href="">{{ request.session.user_name }}</a></span>
+					<span><a href="/myinfo/" style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
 					<a href=""><i class="iconfont icon-shuru" href="" style="color: gray;"></i></a>
 				</div>
 				<img src="../static/img/info/3.png" alt="">
@@ -43,7 +42,7 @@
 			<div class="content">
 				<a href="#"><img src="../static/img/info/22.jpg" id="img5" alt=""></a>
 				<br />
-				<a id="name1">奶味爱丽丝</a>
+				<a id="name1">{{ request.session.user_name }}</a>
 				<br />
 				<a id="message1">桃李春风一杯酒，江湖夜雨十年灯</a>
 			</div>
@@ -56,8 +55,8 @@
 						<div class="card border-light" style="width: 100%;">
 							<div class="card-body">
 								<h6 class="card-subtitle mb-4" style="font-weight:bold;">个人信息</h6>
-								<p class="card-subtitle mb-3">昵称：<a>奶味爱丽丝</a></p>
-								<p class="card-subtitle mb-3">签名：<a>桃李春风一杯酒，江湖夜雨十年灯</a></p>
+								<p class="card-subtitle mb-3">昵称：<a>{{ request.session.user_name }}</a></p>
+								<p class="card-subtitle mb-3">签名：<a>{{ request.session.user_signature }}</a></p>
 								<p class="card-subtitle mb-3">电话：<a>15507437234</a></p>
 								<p class="card-subtitle mb-3">Q Q：<a>1254809709</a></p>
 								<p class="card-subtitle mb-3">微信：<a>12345678</a></p>
@@ -153,8 +152,5 @@
 			  card2.style.display='none';
 			}
 		</script>
-		<script src="./js/plugins/jQuery/jquery-3.3.1.slim.min.js"></script>
-		<script src="./js/plugins/bootstrap/popper.min.js"></script>
-		<script src="./js/plugins/bootstrap/bootstrap.min.js"></script>
 	</body>
 </html>

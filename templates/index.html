@@ -29,7 +29,8 @@
         </span>
     <span class="right">
             <div class="right-content">
-                <span style="font-size: 20px;"><a href="/myinfo/">{{ request.session.user_name }}</a></span>
+                <span><a href="/myinfo/"
+                         style="text-decoration: none; font-size: 25px">{{ request.session.user_name }}</a></span>
                 {% if request.session.is_login %}
                     <a href="/logout/" style="font-size: 20px">登出</a>
                 {% else %}
@@ -52,7 +53,7 @@
 <div class="content">
     <div class="main">
         <div style="margin-left: 50px;">
-            <a href="/write/" style="text-decoration: none" class="h1">点击开始你的创作！</a>
+            <a href="/write/" style="text-decoration: none; color: black" class="h1">点击开始你的创作！</a>
         </div>
         <div class="bg1"><img src="../static/img/index/9.jpg" alt=""></div>
     </div>
@@ -63,28 +64,23 @@
                 <div id="passage">
                     <div style="font-size: 75%;">文章推送</div>
                     <div style="font-size: 40%; padding: 10px 0;">精选文章，为你带来不一样的感受</div>
-                    <button style="padding: 5px 0;"><a href="/toarticle/" style="text-decoration: none; color: white">看看这个</a></button>
+                    <button style="padding: 5px 0;"><a href="/toarticle/" style="text-decoration: none; color: white">看看这个</a>
+                    </button>
                 </div>
                 <div id="images">
                     <div style="font-size: 75%;">图片推送</div>
                     <div style="font-size: 40%; padding: 10px 0;">精选图片，为你带来不一样的感受</div>
-                    <button style="padding: 5px 0;" ><a href="/toimg/" style="text-decoration: none; color: white">看看这个</a></button>
+                    <button style="padding: 5px 0;"><a href="/toimg/"
+                                                       style="text-decoration: none; color: white">看看这个</a></button>
                 </div>
             </div>
             <div class="right-block">
                 <div style="font-size: 90%;">热搜榜</div>
                 <div class="list">
                     <ol style="font-size: 75%;">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        {% for foo in hotdoc %}
+                            <li><a href="/{{ foo.id }}/" style="text-decoration: none; color: black;">{{ foo.title }}</a></li>
+                        {% endfor %}
                     </ol>
                 </div>
             </div>
@@ -107,9 +103,9 @@
             </div>
         </div>
         <div class="buttons">
-            <button id="org">我的发布</button>
-            <button id="gre">我的通知</button>
-            <button id="blue">我的关注</button>
+            <button id="org"><a href="/mysend/" style="text-decoration: none;color: white">我的发布</a></button>
+            <button id="gre"><a href="/mynotice/" style="text-decoration: none;color: white">我的通知</a></button>
+            <button id="blue"><a href="/mypoint/" style="text-decoration: none;color: white">我的关注</a></button>
         </div>
         <div id="decoration4"><img src="../static/img/index/4.png" alt=""></div>
         <div id="decoration5"><img src="../static/img/index/10.svg" alt=""></div>

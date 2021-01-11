@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
+
+from Blog.views import hotarticle
 from user.models import User
 from .forms import UserForm, RegisterForm
 
 
 def index(request):
     context = {
-
+        'hotdoc': hotarticle()
     }
+    print(context)
     return render(request, 'index.html', context)
 
 
@@ -56,13 +59,16 @@ def register(request):
     if request.session.get('is_login', False):
         return redirect("/index/")
     if request.method == "POST":
-        message = "请检查填写的内容！"
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        email = request.POST.get('email')
-        sex = request.POST.get('gender')
-        User.objects.create(name=username, sex=sex, password=password, email=email)
-    return render(request, 'login.html')
+
+        try:
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            email = request.POST.get('email')
+            sex = request.POST.get('gender')
+            User.objects.create(name=username, sex=sex, password=password, email=email)
+        except:
+            message = "请检查填写的内容！"
+    return render(request, 'login.html', locals())
 
 
 def logout(request):

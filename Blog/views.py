@@ -1,6 +1,6 @@
 from idlelib.multicall import r
 
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from Blog.models import Article
 
 from Blog import models
@@ -20,26 +20,33 @@ def toimg(request):
 
 
 def toarticle(request):
-    return render(request, 'passage.html')
+    sentdoc = models.Article.objects.order_by("-click_nums")[0:10]
+    return render(request, 'passage.html',{{'sentdoc':sentdoc}})
+
 
 def myinfo(request):
-    return render(request,'myinfo.html')
+    return render(request, 'myinfo.html')
+
 
 def tosearch(request):
     return render(request, 'search.html')
 
 
-def articlecont(request):
-    nid = request.GET.get('nid')
-    articledata = models.Article.objects.filter(id=nid).first()
-    models.Article.increase_click_nums(articledata)
+def article(request, id):
+    content = models.Article.objects.get(id=id)
+    return render(request, 'passageContent.html', {'content': content})
+
+
+def toart(request):
+    return render(request, 'passageContent.html')
+
+
+def hotarticle():
     hotdoc = models.Article.objects.order_by("-click_nums")[0:10]
-    return render(request, "index.html", {"articledata": articledata, 'hotdoc': hotdoc})
+    return hotdoc
 
 
 def articsent(request):
-    mid = request.GET.get('mid')
-    articledate = models.Article.objects.filter(id=mid).first()
-    models.Article.increase_click_nums(articledate)
     sentdoc = models.Article.objects.order_by("-click_nums")[0:10]
-    return render(request, "passage.html", {"articledate": articledate, 'sentdoc': sentdoc})
+    print(sentdoc)
+    return render(request, "passage.html", {'sentdoc': sentdoc})
