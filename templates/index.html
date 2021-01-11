@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="header">
+<div class="header">
         <span class="left">
             <div class="left-txt">
                 <span><a href="/index/">首页</a></span>
@@ -23,97 +23,109 @@
             </div>
             <img src="../static/img/index/1.png" alt="">
         </span>
-        <span class="center">
+    <span class="center">
             <img src="../static/img/index/logo.png" alt="">
-            <!-- <h1>知更鸟</h1> -->
+        <!-- <h1>知更鸟</h1> -->
         </span>
-        <span class="right">
+    <span class="right">
             <div class="right-content">
-                <span><a href="">个人中心</a></span>
+                <span style="font-size: 20px;"><a href="/myinfo/">{{ request.session.user_name }}</a></span>
+                {% if request.session.is_login %}
+                    <a href="/logout/" style="font-size: 20px">登出</a>
+                {% else %}
+                    <a href="/login/" style="font-size: 20px">登录</a>
+                {% endif %}
                 <span><a href=""><img src="../static/img/index/edit.png" alt="" class="rp"></a></span>
             </div>
             <img src="../static/img/index/3.png" alt="">
         </span>
-        <div class="decoration1">
-            <img src="../static/img/index/7.svg" alt="">
+    <div class="decoration1">
+        <img src="../static/img/index/7.svg" alt="">
+    </div>
+    <div class="decoration2">
+        <img src="../static/img/index/u223.png" alt="">
+    </div>
+    <div class="decoration3">
+        <img src="../static/img/index/8.svg" alt="">
+    </div>
+</div>
+<div class="content">
+    <div class="main">
+        <div style="margin-left: 50px;">
+            <a href="/write/" style="text-decoration: none" class="h1">点击开始你的创作！</a>
         </div>
-        <div class="decoration2">
-            <img src="../static/img/index/u223.png" alt="">
-        </div>
-        <div class="decoration3">
-            <img src="../static/img/index/8.svg" alt="">
+        <div class="bg1"><img src="../static/img/index/9.jpg" alt=""></div>
+    </div>
+    <div id="slogan">
+        <div style="padding-bottom: 30px;">灵感，让生活更简单</div>
+        <div class="blocks">
+            <div class="left-block">
+                <div id="passage">
+                    <div style="font-size: 75%;">文章推送</div>
+                    <div style="font-size: 40%; padding: 10px 0;">精选文章，为你带来不一样的感受</div>
+                    <button style="padding: 5px 0;"><a href="/toarticle/" style="text-decoration: none; color: white">看看这个</a></button>
+                </div>
+                <div id="images">
+                    <div style="font-size: 75%;">图片推送</div>
+                    <div style="font-size: 40%; padding: 10px 0;">精选图片，为你带来不一样的感受</div>
+                    <button style="padding: 5px 0;" ><a href="/toimg/" style="text-decoration: none; color: white">看看这个</a></button>
+                </div>
+            </div>
+            <div class="right-block">
+                <div style="font-size: 90%;">热搜榜</div>
+                <div class="list">
+                    <ol style="font-size: 75%;">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="content">
-        <div class="main">
-            <div style="margin-left: 50px;">
-                <a href="/write/" style="text-decoration: none" class="h1">点击开始你的创作！</a>
+    <div class="spare">
+        <div class="posts">
+            <div id="spare-title">广场</div>
+            <div class="post 1">
+                <img src="../static/img/index/yinghao.png" alt="">
             </div>
-            <div class="bg1"><img src="../static/img/index/9.jpg" alt=""></div>
-        </div>
-        <div id="slogan">
-            <div style="padding-bottom: 30px;">灵感，让生活更简单</div>
-            <div class="blocks">
-                <div class="left-block">
-                    <div id="passage">
-                        <div style="font-size: 75%;">文章推送</div>
-                        <div style="font-size: 40%; padding: 10px 0;">精选文章，为你带来不一样的感受</div>
-                        <button style="padding: 5px 0;">看看这个</button>
-                    </div>
-                    <div id="images">
-                        <div style="font-size: 75%;">图片推送</div>
-                        <div style="font-size: 40%; padding: 10px 0;">精选图片，为你带来不一样的感受</div>
-                        <button style="padding: 5px 0;">看看这个</button>
-                    </div>
-                </div>
-                <div class="right-block">
-                    <div style="font-size: 90%;">热搜榜</div>
-                    <div class="list">
-                        <ol style="font-size: 75%;">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ol>
-                    </div>
-                </div>
+            <div class="post 2">
+                <img src="../static/img/index/yinghao.png" alt="">
+            </div>
+            <div class="post 3">
+                <img src="../static/img/index/yinghao.png" alt="">
+            </div>
+            <div class="post 4">
+                <img src="../static/img/index/yinghao.png" alt="">
             </div>
         </div>
-        <div class="spare">
-            <div class="posts">
-                <div id="spare-title">广场</div>
-                <div class="post 1">
-                    <img src="../static/img/index/yinghao.png" alt="">
-                </div>
-                <div class="post 2">
-                    <img src="../static/img/index/yinghao.png" alt="">
-                </div>
-                <div class="post 3">
-                    <img src="../static/img/index/yinghao.png" alt="">
-                </div>
-                <div class="post 4">
-                    <img src="../static/img/index/yinghao.png" alt="">
-                </div>
-            </div>
-            <div class="buttons">
-                <button id="org">我的发布</button>
-                <button id="gre">我的通知</button>
-                <button id="blue">我的关注</button>
-            </div>
-            <div id="decoration4"><img src="../static/img/index/4.png" alt=""></div>
-            <div id="decoration5"><img src="../static/img/index/10.svg" alt=""></div>
-            <div id="decoration6"><img src="../static/img/index/10.png" alt=""></div>
-            <div id="decoration7"><img src="../static/img/index/11.svg" alt=""></div>
-            <div id="decoration8"><img src="../static/img/index/u215.jpg" alt=""></div>
+        <div class="buttons">
+            <button id="org">我的发布</button>
+            <button id="gre">我的通知</button>
+            <button id="blue">我的关注</button>
         </div>
+        <div id="decoration4"><img src="../static/img/index/4.png" alt=""></div>
+        <div id="decoration5"><img src="../static/img/index/10.svg" alt=""></div>
+        <div id="decoration6"><img src="../static/img/index/10.png" alt=""></div>
+        <div id="decoration7"><img src="../static/img/index/11.svg" alt=""></div>
+        <div id="decoration8"><img src="../static/img/index/u215.jpg" alt=""></div>
+    </div>
 
-    </div>
+</div>
 </body>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#toimg").click(function () {
+            console.log("toimg")
+            htmlobj = $.ajax({url: "/toimg/", async: true});
+        });
+    });
+</script>
 </html>

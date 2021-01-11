@@ -105,8 +105,8 @@ body {
     display: flex;
     position: absolute;
     top: 0;
-    width: 300px;
-    height: 320px;
+    width: 330px;
+    height: 350px;
     flex-direction: column;
     padding: 25px 25px 0px 25px;
     border-radius: 10px 10px 0 0;
@@ -176,8 +176,8 @@ body {
 #foot-tip {
     display: flex;
     position: absolute;
-    top: 320px;
-    width: 300px;
+    top: 350px;
+    width: 330px;
     justify-content: space-around;
     padding: 10px 0;
     font-weight: 525;
