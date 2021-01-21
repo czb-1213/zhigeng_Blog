@@ -8,12 +8,12 @@ from user.models import User
 
 
 def index(request):
-    n = 10
-    i = random.randint(0, Article.objects.count()-n)
-    articles = Article.objects.all()[i:i+n]
+    # n = 10
+    # i = random.randint(0, Article.objects.count() - n)
+    # articles = Article.objects.all()[i:i + n]
     context = {
         'hotdoc': hotarticle(),
-        'send':articles
+        # 'send': articles
     }
     print(context)
     return render(request, 'index.html', context)

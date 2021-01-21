@@ -74,10 +74,9 @@
             <div class="right-block">
                 <div style="font-size: 90%;">热搜榜</div>
                 <div class="list">
-                    <ol style="font-size: 75%;">
+                    <ol style="font-size: 65%;">
                         {% for foo in hotdoc %}
-                            <li><a href="/{{ foo.id }}/"
-                                   style="text-decoration: none; color: black;">{{ foo.title }}</a></li>
+                            <li><a href="/{{ foo.id }}/" style="text-decoration: none; color: black;">{{ foo.title }}</a></li>
                         {% endfor %}
                     </ol>
                 </div>

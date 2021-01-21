@@ -6433,3 +6433,94 @@ Traceback (most recent call last):
   File "E:\ÏîÄ¿\zhigengBlog\venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 65, in __getitem__
     return self._session[key]
 KeyError: 'user_id'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count()-n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count()-n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count()-n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count()-n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count()-n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    i = random.randint(0, Article.objects.count() - n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
+Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Space\Pycharm_workspace\djangoProject\zhigengBlog\Login\views.py", line 12, in index
+    # i = random.randint(0, Article.objects.count() - n)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 222, in randint
+    return self.randrange(a, b+1)
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python37\lib\random.py", line 200, in randrange
+    raise ValueError("empty range for randrange() (%d,%d, %d)" % (istart, istop, width))
+ValueError: empty range for randrange() (0,0, 0)
